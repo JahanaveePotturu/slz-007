@@ -36,7 +36,9 @@ module "vpc" {
 }
 
 module "vpn-gateways" {
-  source = "github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway.git?ref=initial-version"
+  source = "github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway.git?ref=v1.0.0"
+  #source = "github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway.git"
+  #source = "github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway.git?ref=initial-version"
   resource_group_id = module.resource_group.id
   region            = var.region
   ibmcloud_api_key  = var.ibmcloud_api_key
